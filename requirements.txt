@@ -1,7 +1,9 @@
-pymongo==4.2.0
-
-pandas 
-numpy 
+pymongo[srv]==4.2.0
+pandas
+numpy
 scikit-learn
+pymongo
 python-dotenv
--e . #Editable mode
+cryptography
+
+-e .   #editable mode 

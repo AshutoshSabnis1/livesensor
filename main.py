@@ -1,21 +1,39 @@
 from sensor.exception import SensorException
-import os
+import os 
 import sys
 from sensor.logger import logging
+import warnings
+from cryptography.utils import CryptographyDeprecationWarning
+warnings.filterwarnings("ignore", category=CryptographyDeprecationWarning)
+
 from sensor.utils import dump_csv_file_to_mongodb_collection
 
-# def test_exception():
-#    try:
-#        logging.info("Here we will see an error")
-#        a=1/0
-#    except Exception as e:
-#        raise SensorException(e,sys)
-    
+
+
+
 if __name__ == "__main__":
-    file_path = r"C:\Users\HP\OneDrive\Desktop\End to End Project\aps_failure_training_set1.csv"
-    
-    database_name="Storage"
-    collection_name="sensor"
+    file_path="aps_failure_training_set1.csv"
+    database_name="database_sensor"
+    collection_name ="sensor"
     dump_csv_file_to_mongodb_collection(file_path,database_name,collection_name)
-    
-        
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    # try:
+    #     test_exception()
+    # except Exception as e:
+    #     print(e)
